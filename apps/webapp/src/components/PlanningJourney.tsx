@@ -101,7 +101,7 @@ const PREFERENCE_CONFIG: Record<
   }
 > = {
   Minimal: {
-    title: 'Essential Protection',
+    title: 'Minimal Protection',
     description: 'Focus on essential protection (10% of fluid cash)',
     protectionRatio: 0.07, // 7% of fluid income
     wealthRatio: 0.02, // 2% to wealth building
@@ -119,7 +119,7 @@ const PREFERENCE_CONFIG: Record<
     totalRatio: 0.25, // 25% total
   },
   Comprehensive: {
-    title: 'Full Planning',
+    title: 'Comprehensive Planning',
     description:
       'Complete protection with strong wealth focus (40% of fluid cash)',
     protectionRatio: 0.2, // 20% of fluid income
