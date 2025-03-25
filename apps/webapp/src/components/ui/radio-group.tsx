@@ -9,12 +9,14 @@ export interface RadioGroupProps<T extends string = string>
 
 export const RadioGroup = React.forwardRef(
   <T extends string = string>(
-    { className, value, onValueChange, ...props }: RadioGroupProps<T>,
+    { className, ...props }: RadioGroupProps<T>,
     ref: React.ForwardedRef<HTMLDivElement>
   ) => {
     return <div ref={ref} className={cn('space-y-2', className)} {...props} />;
   }
 );
+
+RadioGroup.displayName = 'RadioGroup';
 
 export interface RadioGroupItemProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -40,3 +42,5 @@ export const RadioGroupItem = React.forwardRef<
     </div>
   );
 });
+
+RadioGroupItem.displayName = 'RadioGroupItem';

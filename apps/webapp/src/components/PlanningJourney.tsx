@@ -1,7 +1,5 @@
 'use client';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Slider } from '@/components/ui/slider';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -33,17 +31,6 @@ interface UserProfile {
   monthlyIncome: number;
   expenditureRatio: number;
   investmentPreference: InvestmentPreference;
-}
-
-interface CoveragePlan {
-  productType: 'protection' | 'wealth' | 'legacy';
-  name: string;
-  priority: number;
-  annualPremium: number;
-  maturityYear: number;
-  maturityAge: number;
-  coverageAmount: number;
-  focusAreaScore: number;
 }
 
 interface ContactInfo {
@@ -815,13 +802,9 @@ export function PlanningJourney() {
                       outerRadius={100}
                       fill="#8884d8"
                       dataKey="value"
-                      label={({
-                        name,
-                        percent,
-                      }: {
-                        name: string;
-                        percent: number;
-                      }) => `${Math.round(percent * 100)}%`}
+                      label={({ percent }: { name: string; percent: number }) =>
+                        `${Math.round(percent * 100)}%`
+                      }
                     >
                       {[
                         { name: 'Protection', color: '#3b82f6' },
@@ -921,7 +904,7 @@ export function PlanningJourney() {
           </h3>
           <div className="space-y-6">
             <p className="text-sm text-gray-600">
-              Based on your current age of {profile.age}, we've prepared a
+              Based on your current age of {profile.age}, we&apos;ve prepared a
               roadmap for your financial journey through key life stages, with
               recommended products and estimated annual costs (assuming income
               remains constant).
