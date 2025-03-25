@@ -13,5 +13,8 @@
   "devDependencies": {
     "@nx/workspace": "^20.6.1",
     "nx": "^20.6.1"
+  },
+  "dependencies": {
+    "recharts": "^2.15.1"
   }
 }
